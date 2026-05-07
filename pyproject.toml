@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [project]
 name = "langchain-novita"
-version = "0.1.0"
+version = "0.1.1"
 description = "Novita sandbox backend integration for LangChain Deep Agents"
 authors = [{ name = "Jason", email = "ggbbddjm@gmail.com" }]
 readme = "README.md"
@@ -17,9 +17,9 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/jasonhp/langchain-novita"
-"Source Code" = "https://github.com/jasonhp/langchain-novita"
-"Release Notes" = "https://github.com/jasonhp/langchain-novita/releases"
+Repository = "https://github.com/novitalabs/langchain-novita"
+"Source Code" = "https://github.com/novitalabs/langchain-novita"
+"Release Notes" = "https://github.com/novitalabs/langchain-novita/releases"
 [tool.mypy]
 disallow_untyped_defs = "True"
 
