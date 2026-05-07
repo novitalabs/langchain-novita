@@ -44,6 +44,12 @@ Novita's LLM API is compatible with OpenAI's Chat Completions API. To use Novita
 pip install -U langchain-openai
 ```
 
+Set the model ID:
+
+```bash
+export NOVITA_MODEL_ID="deepseek/deepseek-v4-pro"
+```
+
 ```python
 import os
 
@@ -59,7 +65,7 @@ backend = NovitaSandbox(sandbox=sandbox)
 model = ChatOpenAI(
     model=os.environ["NOVITA_MODEL_ID"],
     api_key=os.environ["NOVITA_API_KEY"],
-    base_url=os.environ["NOVITA_BASE_URL"],
+    base_url="https://api.novita.ai/openai",
 )
 
 agent = create_deep_agent(

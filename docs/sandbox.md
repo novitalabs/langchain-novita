@@ -26,7 +26,7 @@ Set your Novita credentials:
 
 ```bash
 export NOVITA_API_KEY="your-api-key"
-export NOVITA_BASE_URL="your-openai-compatible-base-url"
+export NOVITA_BASE_URL="https://api.novita.ai/openai"
 export NOVITA_MODEL_ID="your-model-id"
 ```
 
@@ -63,7 +63,7 @@ backend = NovitaSandbox(sandbox=sandbox)
 model = ChatOpenAI(
     model=os.environ["NOVITA_MODEL_ID"],
     api_key=os.environ["NOVITA_API_KEY"],
-    base_url=os.environ["NOVITA_BASE_URL"],
+    base_url="https://api.novita.ai/openai",
 )
 
 agent = create_deep_agent(
