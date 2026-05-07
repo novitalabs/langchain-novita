@@ -1,0 +1,72 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "langchain-novita"
+version = "0.1.0"
+description = "Novita sandbox backend integration for LangChain Deep Agents"
+authors = [{ name = "Jason", email = "ggbbddjm@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+license = "MIT"
+dependencies = [
+    "langchain-core>=0.3.15,<2.0.0",
+    "deepagents>=0.5.0,<0.6.0",
+    "novita-sandbox",
+]
+
+[project.urls]
+Repository = "https://github.com/jasonhp/langchain-novita"
+"Source Code" = "https://github.com/jasonhp/langchain-novita"
+"Release Notes" = "https://github.com/jasonhp/langchain-novita/releases"
+[tool.mypy]
+disallow_untyped_defs = "True"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "T201"]
+
+[tool.coverage.run]
+omit = ["tests/*"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers --strict-config --durations=5"
+markers = [
+    "compile: mark placeholder test used to compile integration tests without running them",
+]
+asyncio_mode = "auto"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.codespell]
+optional = true
+
+[tool.poetry.group.test_integration]
+optional = true
+
+[tool.poetry.group.lint]
+optional = true
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+
+[tool.poetry.group.test.dependencies]
+pytest = ">=9.0.3,<10.0.0"
+pytest-asyncio = ">=1.3.0,<2.0.0"
+pytest-socket = "^0.7.0"
+pytest-watcher = "^0.3.4"
+langchain-tests = "1.1.7"
+
+[tool.poetry.group.codespell.dependencies]
+codespell = "^2.2.6"
+
+[tool.poetry.group.test_integration.dependencies]
+
+[tool.poetry.group.lint.dependencies]
+ruff = "^0.5"
+
+[tool.poetry.group.typing.dependencies]
+mypy = "^1.10"
